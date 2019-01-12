@@ -1,6 +1,6 @@
 {
-    "name": "djavue/apps",
-    "description": "cms_apps management",
+    "name": "djavue/auth",
+    "description": "cms_auth management",
     "type": "library",
     "require": {
         "djavue/engine": "dev-master"
