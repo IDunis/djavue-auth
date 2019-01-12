@@ -1,0 +1,21 @@
+{
+    "name": "djavue/apps",
+    "description": "cms_apps management",
+    "type": "library",
+    "require": {
+        "djavue/engine": "dev-master"
+    },
+	"autoload": {
+        "psr-4": {
+            "Djavue\\Engine\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nam Dinh",
+            "email": "dinhtrongnam@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
