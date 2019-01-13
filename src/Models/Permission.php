@@ -1,4 +1,5 @@
 <?php
+
 namespace Djavue\Auth\Models;
 
 use Illuminate\Database\Eloquent\Model;

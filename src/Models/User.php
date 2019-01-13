@@ -1,4 +1,5 @@
 <?php
+
 namespace Djavue\Auth\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
