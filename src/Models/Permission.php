@@ -12,7 +12,13 @@ use Illuminate\Database\Eloquent\Model;
 */
 class Permission extends Model
 {
-    
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'auth_permissions';
+	
     protected $fillable = ['title'];
     
 

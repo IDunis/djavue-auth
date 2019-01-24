@@ -12,8 +12,8 @@ class CreatePermissionsTable extends Migration
      */
     public function up()
     {
-        if(! Schema::hasTable('permissions')) {
-            Schema::create('permissions', function (Blueprint $table) {
+        if(! Schema::hasTable('auth_permissions')) {
+            Schema::create('auth_permissions', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('title');
                 
@@ -30,6 +30,6 @@ class CreatePermissionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('permissions');
+        Schema::dropIfExists('auth_permissions');
     }
 }

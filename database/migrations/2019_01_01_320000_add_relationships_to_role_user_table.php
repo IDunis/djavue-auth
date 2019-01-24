@@ -12,12 +12,12 @@ class AddRelationshipsToRoleUserTable extends Migration
      */
     public function up()
     {
-        if(! Schema::hasTable('role_user')) {
-            Schema::create('role_user', function (Blueprint $table) {
+        if(! Schema::hasTable('rauth_ole_user')) {
+            Schema::create('auth_role_user', function (Blueprint $table) {
                 $table->integer('role_id')->unsigned()->nullable();
-                $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+                $table->foreign('role_id')->references('id')->on('auth_roles')->onDelete('cascade');
                 $table->integer('user_id')->unsigned()->nullable();
-                $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+                $table->foreign('user_id')->references('id')->on('auth_users')->onDelete('cascade');
                 
             });
         }
@@ -30,6 +30,6 @@ class AddRelationshipsToRoleUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role_user');
+        Schema::dropIfExists('auth_role_user');
     }
 }

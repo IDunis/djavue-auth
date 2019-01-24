@@ -12,8 +12,8 @@ class CreateRolesTable extends Migration
      */
     public function up()
     {
-        if(! Schema::hasTable('roles')) {
-            Schema::create('roles', function (Blueprint $table) {
+        if(! Schema::hasTable('auth_roles')) {
+            Schema::create('auth_roles', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('title');
                 
@@ -30,6 +30,6 @@ class CreateRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('auth_roles');
     }
 }

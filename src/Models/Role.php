@@ -12,7 +12,13 @@ use Illuminate\Database\Eloquent\Model;
 */
 class Role extends Model
 {
-    
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'auth_roles';
+	
     protected $fillable = ['title'];
     
 
@@ -36,7 +42,7 @@ class Role extends Model
 
     public function permission()
     {
-        return $this->belongsToMany(Permission::class, 'permission_role');
+        return $this->belongsToMany(Permission::class, 'auth_permission_role');
     }
     
     

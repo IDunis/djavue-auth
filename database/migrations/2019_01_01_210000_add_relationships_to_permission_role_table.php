@@ -12,12 +12,12 @@ class AddRelationshipsToPermissionRoleTable extends Migration
      */
     public function up()
     {
-        if(! Schema::hasTable('permission_role')) {
-            Schema::create('permission_role', function (Blueprint $table) {
+        if(! Schema::hasTable('auth_permission_role')) {
+            Schema::create('auth_permission_role', function (Blueprint $table) {
                 $table->integer('permission_id')->unsigned()->nullable();
-                $table->foreign('permission_id')->references('id')->on('permissions')->onDelete('cascade');
+                $table->foreign('permission_id')->references('id')->on('auth_permissions')->onDelete('cascade');
                 $table->integer('role_id')->unsigned()->nullable();
-                $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+                $table->foreign('role_id')->references('id')->on('auth_roles')->onDelete('cascade');
                 
             });
         }
@@ -30,6 +30,6 @@ class AddRelationshipsToPermissionRoleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('permission_role');
+        Schema::dropIfExists('auth_permission_role');
     }
 }

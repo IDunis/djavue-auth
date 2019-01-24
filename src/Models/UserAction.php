@@ -17,7 +17,14 @@ use Illuminate\Database\Eloquent\Model;
 class UserAction extends Model
 {
     use SoftDeletes;
-    
+	
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'auth_user_actions';
+	
     protected $fillable = ['action', 'action_model', 'action_id', 'user_id'];
 
     /**

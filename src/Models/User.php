@@ -21,7 +21,13 @@ class User extends Authenticatable
 {
     use Notifiable, HasApiTokens;
 
-    
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'auth_users';
+	
     protected $fillable = ['name', 'email', 'password', 'remember_token'];
     protected $hidden = ['password', 'remember_token'];
 
@@ -62,7 +68,7 @@ class User extends Authenticatable
     
     public function role()
     {
-        return $this->belongsToMany(Role::class, 'role_user');
+        return $this->belongsToMany(Role::class, 'auth_role_user');
     }    
 
     public function sendPasswordResetNotification($token)
