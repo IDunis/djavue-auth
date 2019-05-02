@@ -25,7 +25,21 @@ class UserAction extends Model
      */
     protected $table = 'auth_user_actions';
 	
-    protected $fillable = ['action', 'action_model', 'action_id', 'user_id'];
+	/**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = true;
+	
+	/**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */	
+    protected $fillable = [
+		'action', 'action_model', 'action_id', 'user_id'
+	];
 
     /**
      * Set to null if empty

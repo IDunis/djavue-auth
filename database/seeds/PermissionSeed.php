@@ -55,6 +55,7 @@ class PermissionSeed extends Seeder
             ['id' => 118, 'title' => 'post_edit',],
             ['id' => 119, 'title' => 'post_view',],
             ['id' => 120, 'title' => 'post_delete',],
+            
             ['id' => 121, 'title' => 'constant_access',],
             ['id' => 122, 'title' => 'constant_create',],
             ['id' => 123, 'title' => 'constant_edit',],
@@ -65,6 +66,12 @@ class PermissionSeed extends Seeder
             ['id' => 128, 'title' => 'translation_edit',],
             ['id' => 129, 'title' => 'translation_view',],
             ['id' => 130, 'title' => 'translation_delete',],
+            
+            ['id' => 131, 'title' => 'file_access',],
+            ['id' => 132, 'title' => 'file_create',],
+            ['id' => 133, 'title' => 'file_edit',],
+            ['id' => 134, 'title' => 'file_view',],
+            ['id' => 135, 'title' => 'file_delete',],
 			
 			['id' => 200, 'title' => 'application_management_access',], // cms engine
 			['id' => 201, 'title' => 'background_access',],

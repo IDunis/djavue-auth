@@ -28,7 +28,22 @@ class User extends Authenticatable
      */
     protected $table = 'auth_users';
 	
-    protected $fillable = ['name', 'email', 'password', 'remember_token'];
+	/**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = true;
+	
+	/**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */	
+    protected $fillable = [
+		'name', 'email', 'password', 'remember_token'
+	];
+	
     protected $hidden = ['password', 'remember_token'];
 
     public static function storeValidation($request)

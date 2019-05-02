@@ -19,7 +19,21 @@ class Permission extends Model
      */
     protected $table = 'auth_permissions';
 	
-    protected $fillable = ['title'];
+	/**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = true;
+	
+	/**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+		'title'
+	];
     
 
     public static function storeValidation($request)
